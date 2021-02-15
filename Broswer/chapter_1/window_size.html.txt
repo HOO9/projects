@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Size</title>
+    <style>
+        .tag{
+            display: inline-block;
+            background-color: thistle;
+            padding: 16px;
+            margin: 16px;
+            font-size: 48px;
+            }
+    </style>
+</head>
+<javascript>
+    
+</javascript>
+<body>
+    <div class="tag">Window Size</div>
+    <script>
+        // window.addEventListener('resize', function(){
+        //     console.log(`window.inner: ${window.innerWidth}, ${window.innerHeight}`);
+        //    console.log(`documentElement.clientWidth: ${documentElement.clientWidth}, ${documentElement.clientWidth}`);
+        // });
+
+        cont tag = document.querySelector('.tag');
+        window.addEventListener('resize', () => {
+            tag.innerHTML = `
+            window.inner: ${window.innerWidth}, ${window.innerHeight} <br/>
+            documentElement.clientWidth: ${documentElement.clientWidth}, ${documentElement.clientWidth} <br/>
+            `;
+        });
+    </script>
+</body>
+</html>
